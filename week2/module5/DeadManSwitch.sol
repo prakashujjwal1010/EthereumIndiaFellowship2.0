@@ -28,25 +28,24 @@ contract DeadManSwitchContract {
         } else {
             return false;
         }
-
     }
 
     function setCheckInPeriod(uint _periodBlocks) public {
         require(msg.sender == owner);
         checkInPeriodBlocks = _periodBlocks;
-	}
+	  }
 
     function getOwner() public view returns (address) {
         return owner;
     }
 
-	function getRecipient() public view returns (address) {
-	    return recipient;
-	}
+  	function getRecipient() public view returns (address) {
+  	    return recipient;
+  	}
 
-	function setRecipient(address payable _recipient) public {
+  	function setRecipient(address payable _recipient) public {
         require(msg.sender == owner);
         recipient = _recipient;
-	}
+  	}
 
 }

@@ -12,12 +12,10 @@ contract testSuite {
         storageToTest = new Storage();
     }
 
-
     function checkIfValueStoredCorrectly() public {
         storageToTest.store(3245);
         Assert.equal(storageToTest.retrieve(), uint(3245), "3245 should be stored correctly");
     }
-
 
     function defaultValueShouldBeZero() public {
         Assert.equal(storageToTest.retrieve(), uint(0), "default value stored should be zero");
